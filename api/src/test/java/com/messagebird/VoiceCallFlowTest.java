@@ -10,7 +10,6 @@ import org.junit.*;
 import org.mockito.Mockito;
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
-import static org.unitils.reflectionassert.ReflectionAssert.assertReflectionEquals;
 import java.util.*;
 
 /*
@@ -61,6 +60,10 @@ public class VoiceCallFlowTest {
     /*
      * For this test we are checking if the CallFlow inserted in the setup is visible in the list
      * This way we test the Create SDK and the List method in one test
+     * 
+     * I'm moving this to a separate branch so we don't lose the code. I see many tests
+     * that are marked as unit tests, but instead perform an integration test.
+     * Since it's not clear how we should proceed further. I'm keeping this aside for the moment
      */
     @Test
     public void testCreateAndList() throws UnauthorizedException, GeneralException {
